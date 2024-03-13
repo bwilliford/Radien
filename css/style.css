@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #52FF31;
+}
+
+body {
+    background: rgb(13,84,0);
+    background: radial-gradient(circle, rgb(10, 67, 0) 0%, rgb(3, 23, 0) 80%); 
+    /* background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(237, 255, 234) 80%); */
+    font-family: sans-serif;   
+}
+
+.options {
+    color: #fff;
+    list-style-type: none;
+}
+
+.options li {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.options li:hover {
+    color: var(--primary-color);
+}
+
+.options li.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#loader {
+    background: url('../images/emblem.svg');
+    background-size: 100% 100%;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: calc(50vh - 2rem);
+    left: calc(50vw - 2rem);
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spinFast {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spinCycle {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.spinAndGrow {
+    animation-name: spinAndGrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spinGrowCycle {
+    animation-name: spinAndGrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.spinFade {
+    animation-name: spinFade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinAndGrow {
+    0% {
+        transform: rotate(0deg) scale(1); 
+    }
+    50% {
+        transform: rotate(360deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+    }
+}
+
+@keyframes spinFade{
+    0% {
+        transform: rotate(0deg); 
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(360deg);
+        opacity: 0.1;
+    }
+    100% {
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+}
+    
