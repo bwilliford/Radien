@@ -1,121 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
-    --primary-color: #52FF31;
+  --brand-color: #52FF31;
+
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.25);
+  --transition-duration: 0.3s;
+  --transition: 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+
+  --master-border-radius: 12px;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: rgb(13,84,0);
-    background: radial-gradient(circle, rgb(0, 67, 29) 0%, rgb(0, 23, 11) 80%); 
-    /* background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(237, 255, 234) 80%); */
-    font-family: sans-serif;   
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 50%);
+  color: #ddd;
+  font-family: "M PLUS 1 Code";
+}
+
+.down {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  background-image: url('../images/icons/down.svg');
+  opacity: 0.6;
+  transition-duration: 0.5s;
+  z-index: 1;
+}
+
+.down:hover {
+  opacity: 1;
+  background-color: var(--brand-color);
+  transition-duration: 0.5s;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(225, 255, 225, 0.6);
+  font-family: "Open Sans";
+}
+
+a {
+  color: var(--brand-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 100%;
+  margin: 0;
+}
+
+#typeCode {
+  border-right: 1px solid #ccc;
+  padding-right: 8px;
+  width: fit-content;
+}
+
+span {
+  font-weight: 400;
+}
+
+.color-brand {
+  color: var(--brand-color);
+}
+
+button, #downloadButton {
+  background-color: var(--brand-color);
+  border-radius: var(--master-border-radius);
+  line-height: 44px;
+  height: 44px;
+  border: 0px solid #000;
+  color: #04061d;
+  padding: 0 20px;
+  box-shadow: 0px 8px 16px #53ff312c;
+  transition-duration: var(--transition-duration);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 32px #53ff3146;
+  transition-duration: var(--transition-duration);
+}
+
+.download {
+  padding-left: 48px;
+  background-image: url('../images/icons/download.svg');
+  background-repeat: no-repeat;
+  background-position: 12px 50%;
+}
+
+.spacer-8 {
+  height: 8px;
+}
+
+.spacer-16 {
+  height: 16px;
+}
+
+.spacer-24 {
+  height: 24px;
+}
+
+.spacer-32 {
+  height: 32px;
+}
+
+.badge {
+  width: 100%;
+  display: inline-block;
+}
+
+.section {
+  padding: 10vh 0 10vh 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+.half {
+  min-height: 50vh;
+}
+
+.section img {
+  width: 100%;
+  transition-duration: var(--transition-duration);
+}
+
+.thumbnail {
+  border-radius: 12px;
+  margin-top: 60px;
+}
+
+.drawdojo {
+  background: linear-gradient(180deg, rgb(66, 137, 205), rgba(6, 6, 155, 0.1) 150%), linear-gradient(32deg, rgba(0, 179, 255, 0.738), rgba(0, 255, 0, 0) 75%), linear-gradient(334deg, rgba(0, 255, 208, 0.852), rgba(0, 0, 255, 0) 75%);
+  min-height: 60vh;
+}
+
+#backgroundVideo {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* -webkit-mask-image: url('../images/mask.png');
+  mask-image: url('../images/mask.png');
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover; */
+}
+
+#mainHero {
+  /* background-image: url('../images/mask.png'); */
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 70%);
+  background-size: 100vw 100vh;
+  background-attachment: scroll;
+}
+
+.mysticalpath {
+  background-image: url('../images/mysticalpath-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  background-position: fixed;
+  min-height: 50vh;
+}
+
+.mysticalpath-hero {
+  background-image: url('../images/mysticalpath-hero.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100%;
+  background-position: top;
+}
+
+.drawingstats {
+  background-image: url('../images/mysticalpath-bg2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  background-position: fixed;
+  min-height: 50vh;
+}
+
+.zensketch {
+  background-image: url('../images/zensketch/zenmode-bg.jpg');
+  background-position: bottom;
+  min-height: 60vh;
+}
+
+.destined {
+  background-image: url('../images/destined2.jpg');
+  padding: 350px 0 350px 0;
+}
+
+.header-contact {
+  background-image: url('../images/header-contact.jpg');
+  background-size: cover;
+  background-position: bottom;
+  padding: 300px 0 200px 0px;
+}
+
+
+.btn {
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Logo */
+#logo {
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  height: 60px;
+  width: 160px;
+  transition-duration: var(--transition-duration);
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  transition-duration: var(--transition-duration);
+}
+
+/* Nav */
+#nav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 0;
+  transition-duration: var(--transition-duration);
+}
+
+#nav a {
+  color: white;
+}
+
+#nav {
+  margin-right: 30px;
+}
+
+#nav li {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 100px;
+  transition-duration: 2000ms;
+  padding: 0 20px 0 20px;
+}
+
+#nav li:hover {
+  color: var(--brand-color);
+  transform: scale(1.05);
+  transition-duration: var(--transition-duration);
+  cursor: pointer;
+}
+
+#navWrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: var(--transition-duration);
+  z-index: 2;
+}
+
+#navTrigger {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 32px;
+  right: 28px;
+  background-image: url('../images/icons/hamburger.svg');
+  z-index: 3;
+  display: none;
+  cursor: pointer;
+}
+
+/* The only rule that matters */
+#video-background {
+  /*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+
+}
+
+.video-container {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+  margin: 100px 0;
+}
+
+.social-icon {
+  color: #fff;
+}
+
+ul.social-icons {
+  width: 245px;
+  margin: 10px auto 10px auto;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+  margin-right: 5px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.fa-facebook {
+  padding: 12px 16px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #3d5b99;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-facebook:hover {
+  opacity: 0.6;
+}
+
+.fa-twitter {
+  padding: 12px 13px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #00aced;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-twitter:hover {
+  opacity: 0.6;
+}
+
+.fa-youtube {
+  padding: 12px 14px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #e64a41;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-youtube:hover {
+  opacity: 0.6;
+}
+
+.fa-linkedin {
+  padding: 12px 14px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #0073a4;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-linkedin:hover {
+  opacity: 0.6;
+}
+
+.fa-google-plus {
+  padding: 12px 10px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #e25714;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-google-plus:hover {
+  opacity: 0.6;
+}
+
+nav .button-collapse {
+  float: right;
+}
+
+.side-nav {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.side-nav li>a {
+  color: #eee;
+  font-size: 18px;
+  font-weight: 300;
+  height: 80px;
+  line-height: 80px;
+  margin: 0;
+  border-top: 1px solid #222;
+}
+
+.gameTitle {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 0;
+    transform: translateX(0%);
+  }
+
+  .gameTitle {
+    margin-top: 60vh;
+  }
+}
+
+/* Change look / feel for smaller screen sizes */
+@media only screen and (max-width: 576px) {
+
+  #nav {
+    top: 20vh;
+    right: 0;
+    width: 100vw;
+    margin-right: 0px;
+  }
+
+  #nav li {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+  }
+
+  #navWrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    z-index: -1;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    transition-duration: var(--transition);
+  }
+
+  #navWrapper.active {
+    z-index: 2;
+    opacity: 1;
+    transition-duration: var(--transition);
+  }
+
+  #navTrigger {
+    display: block;
+  }
+
+  #navTrigger.active {
+    background-image: url('../images/icons/x.svg');
+  }
 }
 
 .options {
-    color: #fff;
-    list-style-type: none;
+  color: #fff;
+  list-style-type: none;
 }
 
 .options li {
-    display: inline-block;
-    margin-right: 20px;
-    line-height: 40px;
-    cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  line-height: 40px;
+  cursor: pointer;
 }
 
 .options li:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .options li.active {
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 #loader {
-    background: url('../images/emblem.svg');
-    background-size: 100% 100%;
-    height: 4rem;
-    width: 4rem;
-    position: absolute;
-    top: calc(50vh - 2rem);
-    left: calc(50vw - 2rem);
+  background: url('../images/emblem.svg');
+  background-size: 100% 100%;
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: calc(50vh - 2rem);
+  left: calc(50vw - 2rem);
 }
 
 .spin {
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .spinFast {
-    animation-name: spin;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .spinCycle {
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .spinAndGrow {
-    animation-name: spinAndGrow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  animation-name: spinAndGrow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .spinGrowCycle {
-    animation-name: spinAndGrow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  animation-name: spinAndGrow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .spinFade {
-    animation-name: spinFade;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  animation-name: spinFade;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 
 
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 @keyframes spinAndGrow {
-    0% {
-        transform: rotate(0deg) scale(1); 
-    }
-    50% {
-        transform: rotate(360deg) scale(1.5);
-    }
-    100% {
-        transform: rotate(720deg) scale(1);
-    }
+  0% {
+      transform: rotate(0deg) scale(1); 
+  }
+  50% {
+      transform: rotate(360deg) scale(1.5);
+  }
+  100% {
+      transform: rotate(720deg) scale(1);
+  }
 }
 
 @keyframes spinFade{
-    0% {
-        transform: rotate(0deg); 
-        opacity: 1;
-    }
-    50% {
-        transform: rotate(360deg);
-        opacity: 0.1;
-    }
-    100% {
-        transform: rotate(720deg);
-        opacity: 1;
-    }
+  0% {
+      transform: rotate(0deg); 
+      opacity: 1;
+  }
+  50% {
+      transform: rotate(360deg);
+      opacity: 0.1;
+  }
+  100% {
+      transform: rotate(720deg);
+      opacity: 1;
+  }
 }
-    
+  

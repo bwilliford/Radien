@@ -1,42 +1,113 @@
 <html>
 
 <head>
-    <title>Radien</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Radien App">
-    <meta name="keywords" content="Clean up front-end">
-    <meta name="author" content="Blake WIlliford">
-  
-    <link rel="stylesheet" href="./css/style.css">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radien App</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="AI-powered component analytics and automation tool">
+  <meta name="keywords" content="front-end analytics, front-end automation, AI tool">
+  <meta name="author" content="">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css\style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <ul id="optionMenu" class="options">
-        <li id="option-spin" class="active" onclick="changeAnimation('spin')">Spin</li>
-        <li id="option-spinFast" onclick="changeAnimation('spinFast')">SpinFast</li>
-        <li id="option-spinCycle" onclick="changeAnimation('spinCycle')">SpinCycle</li>
-        <li id="option-spinAndGrow" onclick="changeAnimation('spinAndGrow')">SpinGrow</li>
-        <li id="option-spinGrowCycle" onclick="changeAnimation('spinGrowCycle')">SpinGrowCycle</li>
-        <li id="option-spinFade" onclick="changeAnimation('spinFade')">SpinFade</li>
+
+  <!-- Logo -->
+  <a href="./index.html">
+    <div id="logo">
+    </div>
+  </a>
+
+  <!-- This is my nav -->
+  <div id="navTrigger" onclick="toggleNav()"></div>
+
+  <div id="navWrapper">
+    <ul id="nav">
+      <a href="#features" onclick="toggleNav()">
+        <li>Features</li>
+      </a>
+      <a href="#mission" onclick="toggleNav()">
+        <li>Mission</li>
+      </a>
+      <a href="#investors" onclick="toggleNav()">
+        <li>Investors</li>
+      </a>
+      <button class="download" href="#download" onclick="toggleNav()">
+        Download
+      </button>
     </ul>
-    <div id="loader" class="spin"></div>
-</body>
+  </div>
 
-<script>
-    function changeAnimation(name) {
-        //Reset actives
-        optionMenu = document.getElementById("optionMenu");
-        for (let child of optionMenu.children) {
-            child.className = "";
-        }           
+  <!--  <section class="video-container">
+    <video autoplay loop id="video-background" muted plays-inline>
+  <source src="video/zenmode.mp4" type="video/mp4">
+</video>
 
-        //Set new active
-        document.getElementById("option-"+name).classList.toggle("active");
+</section>-->
+  <!-- <video id="backgroundVideo" autoplay loop muted preload="auto">
+    <source src="./video/sword.mov" type="video/mp4">
+  </video> -->
+  <div class="section" id="mainHero">
+    <div class="container" style="margin-top: 20vh">
+      <div class="row">
+        <div class="col s12 m12 l8">
+          <h3>Make your front-end</h3>
+          <h3 id="typeCode" class="color-brand"></h3>
 
-        //Change loader
-        document.getElementById("loader").className = name;
-    }
-</script>
+          <div class="spacer-8"></div>
+          <p>Analytics and automation tools driven by AI that help you analyze and find inconsistencies, inefficiencies,
+            and dead code in your UI.</p>
+
+          <div class="spacer-16"></div>
+          <button class="download">Try the beta</button>
+        </div>
+        <div class="col s12 m12 l4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#features"><div class="down"></div></a>
+
+  <div class="section half" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <h5 class="color-brand">//More consistent</h5>
+
+          <div class="spacer-32"></div>
+          <h3>Component Analytics</h3>
+          <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
+        </div>
+        <div class="col s12 m6 l6">
+          <a href="./MysticalPath.html" alt="Mystical Path - An action RPG that teaches you how to draw"><img
+            src="images/mysticalpath-teaser.png"><img></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; D.Science, All Rights Reserved <a href="https://instagram.com/destinedstudio" target="_blank"><img
+            style="float: right; height: 40px; width: 40px; border-radius: 14px; margin-top: -10px;"
+            src="images/instagram.png"></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  </body>
 </html>
