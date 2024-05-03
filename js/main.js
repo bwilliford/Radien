@@ -12,6 +12,10 @@ const delay = 100;
 document.addEventListener("DOMContentLoaded", function () {
     typeCode = document.getElementById("typeCode");
     typeStrings(valueProps, delay);
+
+    setTimeout(() => {
+        document.getElementById("loaderOverlay").classList.toggle("active");
+    }, 1000);
 });
 
 //Type text functions
@@ -59,3 +63,16 @@ function toggleNav() {
   document.getElementById("navWrapper").classList.toggle("active");
   document.getElementById("navTrigger").classList.toggle("active");
 }
+
+//Scrollbar
+let winTop = window.scrollY;
+let docHeight = document.body.scrollHeight;
+let winHeight = window.innerHeight;
+let initialScroll = Math.floor((winHeight/docHeight)*100);
+document.getElementById('main-progressbar').style.height = initialScroll+'%';
+
+document.addEventListener('scroll', function(e) {
+  winTop = window.scrollY;
+  totalScroll = Math.floor(((winTop + winHeight)/docHeight)*100);
+  document.getElementById('main-progressbar').style.height = totalScroll+'%';
+});

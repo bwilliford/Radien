@@ -20,13 +20,17 @@ body {
 }
 
 .down {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  bottom: 0;
+  bottom: 16px;
+  border-radius: 50%;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -30px;
   background-image: url('../images/icons/down.svg');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
   opacity: 0.6;
   transition-duration: 0.5s;
   z-index: 1;
@@ -34,6 +38,7 @@ body {
 
 .down:hover {
   opacity: 1;
+  background-image: url('../images/icons/down-dark.svg');
   background-color: var(--brand-color);
   transition-duration: 0.5s;
 }
@@ -41,8 +46,13 @@ body {
 p {
   font-size: 18px;
   font-weight: 300;
-  color: rgba(225, 255, 225, 0.6);
+  color: rgba(225, 255, 225, 0.7);
   font-family: "Open Sans";
+}
+
+.caption {
+  font-size: 16px;
+  color: rgba(225, 255, 225, 0.5);
 }
 
 a {
@@ -54,6 +64,10 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 
+h6 {
+  font-size: 20px;
+}
+
 #typeCode {
   border-right: 1px solid #ccc;
   padding-right: 8px;
@@ -62,13 +76,18 @@ h1,h2,h3,h4,h5,h6 {
 
 span {
   font-weight: 400;
+  color: var(--brand-color);
 }
 
 .color-brand {
   color: var(--brand-color);
 }
 
-button, #downloadButton {
+.color-lightbrand {
+  color: rgba(225, 255, 225, 0.7);
+}
+
+button, button:active {
   background-color: var(--brand-color);
   border-radius: var(--master-border-radius);
   line-height: 44px;
@@ -109,6 +128,10 @@ button:hover {
   height: 32px;
 }
 
+.spacer-40 {
+  height: 40px;
+}
+
 .badge {
   width: 100%;
   display: inline-block;
@@ -123,12 +146,19 @@ button:hover {
 }
 
 .half {
-  min-height: 50vh;
+  padding: 20vh 0 20vh 0;
+  min-height: 60vh;
+}
+
+#mission {
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 50%);
 }
 
 .section img {
   width: 100%;
   transition-duration: var(--transition-duration);
+  border-radius: var(--master-border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .thumbnail {
@@ -463,6 +493,10 @@ nav .button-collapse {
     text-align: center;
   }
 
+  #nav button {
+    display: none;
+  }
+
   #navWrapper {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(30px);
@@ -501,12 +535,12 @@ nav .button-collapse {
 }
 
 .options li:hover {
-  color: var(--primary-color);
+  color: var(--brand-color);
 }
 
 .options li.active {
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
+  color: var(--brand-color);
+  border-bottom: 3px solid var(--brand-color);
 }
 
 #loader {
@@ -598,3 +632,44 @@ nav .button-collapse {
   }
 }
   
+#loaderOverlay.active {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(4,16,19,0.8);
+  backdrop-filter: blur(30px);
+  z-index: 4;
+  opacity: 1;
+}
+
+#loaderOverlay {
+  transition-duration: 0.9s;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Scrollbar */
+.main-progressbar-container {
+  position: fixed;
+  left: 64px;
+  top: 20vh;
+  width: 2px;
+  height: 60vh;
+  background-color: rgba(225,255,225,0.2);
+  z-index: 1;
+}
+
+#main-progressbar {
+  width: 2px;
+  height: 0%;
+  background-color: var(--brand-color);
+  -webkit-transition: height .5s ease;
+  -o-transition: height .5s ease;
+  transition: height .5s ease;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-progressbar-container {
+      display: none;
+  }
+}

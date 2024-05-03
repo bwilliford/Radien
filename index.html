@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="AI-powered component analytics and automation tool">
   <meta name="keywords" content="front-end analytics, front-end automation, AI tool">
-  <meta name="author" content="">
+  <meta name="author" content="Radien by D.Science">
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,13 +18,18 @@
 
 <body>
 
+  <!-- Loader overlay -->
+  <div id="loaderOverlay" class="active">
+    <div id="loader" class="spinFast"></div>
+  </div>
+
   <!-- Logo -->
   <a href="./index.html">
     <div id="logo">
     </div>
   </a>
 
-  <!-- This is my nav -->
+  <!-- Nav -->
   <div id="navTrigger" onclick="toggleNav()"></div>
 
   <div id="navWrapper">
@@ -38,10 +43,14 @@
       <a href="#investors" onclick="toggleNav()">
         <li>Investors</li>
       </a>
-      <button class="download" href="#download" onclick="toggleNav()">
+      <a href="#download" onclick="toggleNav()"><button class="download" >
         Download
-      </button>
+      </button></a>
     </ul>
+  </div>
+
+  <div class="main-progressbar-container">
+    <div id="main-progressbar"></div>
   </div>
 
   <!--  <section class="video-container">
@@ -56,7 +65,7 @@
   <div class="section" id="mainHero">
     <div class="container" style="margin-top: 20vh">
       <div class="row">
-        <div class="col s12 m12 l8">
+        <div class="col s12 m10 l8">
           <h3>Make your front-end</h3>
           <h3 id="typeCode" class="color-brand"></h3>
 
@@ -67,7 +76,7 @@
           <div class="spacer-16"></div>
           <button class="download">Try the beta</button>
         </div>
-        <div class="col s12 m12 l4">
+        <div class="col s12 m2 l4">
         </div>
       </div>
     </div>
@@ -79,15 +88,122 @@
     <div class="container">
       <div class="row">
         <div class="col s12 m6 l6">
-          <h5 class="color-brand">//More consistent</h5>
+          <div class="spacer-32"></div>
+          <h6 class="color-brand">//More consistent</h6>
 
           <div class="spacer-32"></div>
           <h3>Component Analytics</h3>
           <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
         </div>
         <div class="col s12 m6 l6">
-          <a href="./MysticalPath.html" alt="Mystical Path - An action RPG that teaches you how to draw"><img
-            src="images/mysticalpath-teaser.png"><img></a>
+          <img src="./images/components.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section half" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <img src="./images/components.jpeg">
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="spacer-32"></div>
+          <h6 class="color-brand">//More consistent</h6>
+
+          <div class="spacer-32"></div>
+          <h3>Component Analytics</h3>
+          <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section half" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="spacer-32"></div>
+          <h6 class="color-brand">//More consistent</h6>
+
+          <div class="spacer-32"></div>
+          <h3>Component Analytics</h3>
+          <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
+        </div>
+        <div class="col s12 m6 l6">
+          <img src="./images/components.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section half" id="mission">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m1 l2">
+        </div>
+        <div class="col s12 m10 l8">
+          <div class="spacer-32"></div>
+          <h6 class="color-brand center-align">//Mission</h6>
+
+          <div class="spacer-32"></div>
+          <h3 class="center-align">We help front-end teams whose UI is <span>mission critical</span></h3>
+          <p>Modern UIs are complex, especially when multiple products or brands are involved. Our mission is to help you scale your UIs and design systems efficiently, saving time, money, and effort. Radien is a must-have tool for: </p>        
+        </div>
+        <div class="col s12 m1 l2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <h5 class="center-align color-lightbrand">Front-end Developers</h5>
+        </div>
+        <div class="col s12 m4 l4">
+          <h5 class="center-align color-lightbrand">UI Engineers</h5>
+        </div>
+        <div class="col s12 m4 l4">
+          <h5 class="center-align color-lightbrand">Design System Teams</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section half" id="investors">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m1 l1">
+        </div>
+        <div class="col s12 m10 l10">
+          <div class="spacer-32"></div>
+          <h6 class="color-brand center-align">//Our partners</h6>
+
+          <div class="spacer-32"></div>
+          <h3 class="center-align">Backed by world-class <span>investors</span></h3>
+          <p class="center-align">For inquiries reach out to: <b>info@radien.ai</b></p>      
+        </div>
+        <div class="col s12 m1 l1">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section half" style="background-color: #000" id="download">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="spacer-32"></div>
+          <h6 class="color-brand">//Try it out</h6>
+
+          <div class="spacer-32"></div>
+          <h3>Download the Beta</h3>
+          <p>Our current Beta is a desktop application. You can download the latest build with the link below.</p>  
+
+          <div class="spacer-16"></div>
+          <button class="download">Download for Mac OSX</button>    
+          <p class="caption">Version 3.5.1 (1.5GB Disk Space Required)</p>  
+        </div>
+        <div class="col s12 m6 l6">
+          <img src="./images/macbook.png">
         </div>
       </div>
     </div>
@@ -96,9 +212,9 @@
   <div class="footer">
     <div class="footer-copyright">
       <div class="container">
-        &copy; D.Science, All Rights Reserved <a href="https://instagram.com/destinedstudio" target="_blank"><img
+        &copy; D.Science, All Rights Reserved <!--<a href="https://instagram.com/destinedstudio" target="_blank"><img
             style="float: right; height: 40px; width: 40px; border-radius: 14px; margin-top: -10px;"
-            src="images/instagram.png"></a>
+            src="images/instagram.png"></a>-->
       </div>
     </div>
   </div>
@@ -106,8 +222,8 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
   
   </body>
 </html>
