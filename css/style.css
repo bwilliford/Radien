@@ -558,6 +558,10 @@ nav .button-collapse {
   #logo {
     left: 20px;
   }
+
+  h3 {
+    font-size: 32px;
+  }
 }
 
 .options {
