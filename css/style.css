@@ -31,13 +31,11 @@ body {
   background-size: 60% 60%;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.6;
   transition-duration: 0.5s;
   z-index: 1;
 }
 
 .down:hover {
-  opacity: 1;
   background-image: url('../images/icons/down-dark.svg');
   background-color: var(--brand-color);
   transition-duration: 0.5s;
@@ -87,7 +85,37 @@ span {
   color: rgba(225, 255, 225, 0.7);
 }
 
-button, button:active {
+.blackBG {
+  background-color: #000000;
+}
+
+.box {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: var(--master-border-radius);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition-duration: var(--transition-duration);
+}
+
+.box:hover {
+  transform: scale(1.05);
+  transition-duration: var(--transition-duration);
+}
+
+.investor {
+  padding: 20px;
+}
+
+.investor:hover {
+  transform: scale(1.1);
+  transition-duration: var(--transition-duration);
+}
+
+button, button:focus, button:active {
   background-color: var(--brand-color);
   border-radius: var(--master-border-radius);
   line-height: 44px;
@@ -106,7 +134,7 @@ button:hover {
 }
 
 .download {
-  padding-left: 48px;
+  padding-left: 48px !important;
   background-image: url('../images/icons/download.svg');
   background-repeat: no-repeat;
   background-position: 12px 50%;
@@ -147,11 +175,12 @@ button:hover {
 
 .half {
   padding: 20vh 0 20vh 0;
-  min-height: 60vh;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 40%);
 }
 
 #mission {
-  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 50%);
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 40%);
 }
 
 .section img {
@@ -192,7 +221,7 @@ button:hover {
 
 #mainHero {
   /* background-image: url('../images/mask.png'); */
-  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 70%);
+  background: radial-gradient(circle, rgba(14,44,56,1) 0%, rgba(4,16,19,1) 50%);
   background-size: 100vw 100vh;
   background-attachment: scroll;
 }
@@ -515,10 +544,19 @@ nav .button-collapse {
 
   #navTrigger {
     display: block;
+    right: 20px;
   }
 
   #navTrigger.active {
     background-image: url('../images/icons/x.svg');
+  }
+
+  #download {
+    display: none;
+  }
+
+  #logo {
+    left: 20px;
   }
 }
 
@@ -657,15 +695,18 @@ nav .button-collapse {
   height: 60vh;
   background-color: rgba(225,255,225,0.2);
   z-index: 1;
+  border-radius: 1px;
 }
 
 #main-progressbar {
   width: 2px;
   height: 0%;
+  border-radius: 1px;
   background-color: var(--brand-color);
   -webkit-transition: height .5s ease;
   -o-transition: height .5s ease;
   transition: height .5s ease;
+  box-shadow: 0px 8px 16px #53ff314a;
 }
 
 @media only screen and (max-width: 992px) {

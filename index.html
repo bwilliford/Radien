@@ -7,11 +7,23 @@
   <meta name="keywords" content="front-end analytics, front-end automation, AI tool">
   <meta name="author" content="Radien by D.Science">
 
+  <!--Favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
+
+  <!--Import CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css\style.css">
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -24,7 +36,7 @@
   </div>
 
   <!-- Logo -->
-  <a href="./index.html">
+  <a href="./index.html" data-aos="fade-down" data-aos-delay="1000">
     <div id="logo">
     </div>
   </a>
@@ -33,7 +45,7 @@
   <div id="navTrigger" onclick="toggleNav()"></div>
 
   <div id="navWrapper">
-    <ul id="nav">
+    <ul id="nav" data-aos="fade-down" data-aos-delay="1000">
       <a href="#features" onclick="toggleNav()">
         <li>Features</li>
       </a>
@@ -49,7 +61,7 @@
     </ul>
   </div>
 
-  <div class="main-progressbar-container">
+  <div class="main-progressbar-container" data-aos="fade-right" data-aos-delay="1300">
     <div id="main-progressbar"></div>
   </div>
 
@@ -65,7 +77,7 @@
   <div class="section" id="mainHero">
     <div class="container" style="margin-top: 20vh">
       <div class="row">
-        <div class="col s12 m10 l8">
+        <div class="col s12 m10 l8" data-aos="fade-right" data-aos-delay="1500">
           <h3>Make your front-end</h3>
           <h3 id="typeCode" class="color-brand"></h3>
 
@@ -87,15 +99,15 @@
   <div class="section half" id="features">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-right">
           <div class="spacer-32"></div>
           <h6 class="color-brand">//More consistent</h6>
 
           <div class="spacer-32"></div>
-          <h3>Component Analytics</h3>
+          <h4>Component Analytics</h4>
           <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-left">
           <img src="./images/components.jpeg">
         </div>
       </div>
@@ -105,15 +117,15 @@
   <div class="section half" id="features">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-right">
           <img src="./images/components.jpeg">
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-left">
           <div class="spacer-32"></div>
           <h6 class="color-brand">//More consistent</h6>
 
           <div class="spacer-32"></div>
-          <h3>Component Analytics</h3>
+          <h4>Component Analytics</h4>
           <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
         </div>
       </div>
@@ -123,15 +135,15 @@
   <div class="section half" id="features">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-right">
           <div class="spacer-32"></div>
           <h6 class="color-brand">//More consistent</h6>
 
           <div class="spacer-32"></div>
-          <h3>Component Analytics</h3>
+          <h4>Component Analytics</h4>
           <p>Radien finds all of your components, categorizes them, and finds inefficiencies that can be addressed. Use the Review and Replace feature to clean up duplicates in seconds and without opening your code edtior. </p>        
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-left">
           <img src="./images/components.jpeg">
         </div>
       </div>
@@ -143,12 +155,12 @@
       <div class="row">
         <div class="col s12 m1 l2">
         </div>
-        <div class="col s12 m10 l8">
+        <div class="col s12 m10 l8" data-aos="fade-up">
           <div class="spacer-32"></div>
           <h6 class="color-brand center-align">//Mission</h6>
 
           <div class="spacer-32"></div>
-          <h3 class="center-align">We help front-end teams whose UI is <span>mission critical</span></h3>
+          <h4 class="center-align">We help front-end teams whose UI is <span>mission critical</span></h4>
           <p>Modern UIs are complex, especially when multiple products or brands are involved. Our mission is to help you scale your UIs and design systems efficiently, saving time, money, and effort. Radien is a must-have tool for: </p>        
         </div>
         <div class="col s12 m1 l2">
@@ -156,13 +168,13 @@
       </div>
       <div class="row">
         <div class="col s12 m4 l4">
-          <h5 class="center-align color-lightbrand">Front-end Developers</h5>
+          <h5 class="center-align color-lightbrand box">Front-end Developers</h5>
         </div>
         <div class="col s12 m4 l4">
-          <h5 class="center-align color-lightbrand">UI Engineers</h5>
+          <h5 class="center-align color-lightbrand box">UI Engineers</h5>
         </div>
         <div class="col s12 m4 l4">
-          <h5 class="center-align color-lightbrand">Design System Teams</h5>
+          <h5 class="center-align color-lightbrand box">Design System Teams</h5>
         </div>
       </div>
     </div>
@@ -173,36 +185,51 @@
       <div class="row">
         <div class="col s12 m1 l1">
         </div>
-        <div class="col s12 m10 l10">
+        <div class="col s12 m10 l10" data-aos="fade-up">
           <div class="spacer-32"></div>
           <h6 class="color-brand center-align">//Our partners</h6>
 
           <div class="spacer-32"></div>
-          <h3 class="center-align">Backed by world-class <span>investors</span></h3>
-          <p class="center-align">For inquiries reach out to: <b>info@radien.ai</b></p>      
+          <h4 class="center-align">Backed by world-class <span>investors</span></h4>
+          <p class="center-align">For inquiries reach out to: <b>web@dscience.ai</b></p>      
         </div>
         <div class="col s12 m1 l1">
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col s12 m4 l4">
+          <img class="investor" src="./images/investor-a12.png">
+        </div>
+        <div class="col s12 m4 l4">
+          <img class="investor" src="./images/investor-wnderco.png">
+        </div>
+        <div class="col s12 m4 l4">
+          <img class="investor" src="./images/investor-allturtles.png">
+        </div>
+        <div class="col s2">
+          
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section half" style="background-color: #000" id="download">
+  <div class="section half blackBG" id="download">
     <div class="container">
       <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-right">
           <div class="spacer-32"></div>
           <h6 class="color-brand">//Try it out</h6>
 
           <div class="spacer-32"></div>
-          <h3>Download the Beta</h3>
+          <h4>Download the Beta</h4>
           <p>Our current Beta is a desktop application. You can download the latest build with the link below.</p>  
 
           <div class="spacer-16"></div>
           <button class="download">Download for Mac OSX</button>    
           <p class="caption">Version 3.5.1 (1.5GB Disk Space Required)</p>  
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m6 l6" data-aos="fade-left">
           <img src="./images/macbook.png">
         </div>
       </div>
@@ -221,6 +248,7 @@
 
 
   <!--Import jQuery before materialize.js-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->

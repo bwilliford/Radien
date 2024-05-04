@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         document.getElementById("loaderOverlay").classList.toggle("active");
     }, 1000);
+
+    AOS.init();
 });
 
 //Type text functions
