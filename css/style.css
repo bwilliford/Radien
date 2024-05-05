@@ -70,6 +70,10 @@ h6 {
   border-right: 1px solid #ccc;
   padding-right: 8px;
   width: fit-content;
+  animation-name: blinkBorder;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 span {
@@ -635,8 +639,14 @@ nav .button-collapse {
   animation-timing-function: linear;
 }
 
-
-
+@keyframes blinkBorder {
+  from {
+      border-right: 1px solid rgba(255,255,255,0.0);
+  }
+  to {
+      border-right: 1px solid rgba(255,255,255,1);
+  }
+}
 
 @keyframes spin {
   from {
