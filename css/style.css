@@ -530,7 +530,7 @@ nav .button-collapse {
 }
 
 /* Change look / feel for smaller screen sizes */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 732px) {
 
   #nav {
     top: 20vh;
