@@ -66,6 +66,13 @@ function toggleNav() {
   document.getElementById("navTrigger").classList.toggle("active");
 }
 
+//Clipboard
+function copyToClipboard() {
+    document.getElementById('my-email').select();
+    document.execCommand("Copy");
+    alert("Copied the text: rushil@radien.app");
+}
+
 //Scrollbar
 let winTop = window.scrollY;
 let docHeight = document.body.scrollHeight;
