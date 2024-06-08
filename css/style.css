@@ -529,6 +529,10 @@ nav .button-collapse {
   }
 }
 
+.reverse .col {
+  float: left !important;
+}
+
 /* Change look / feel for smaller screen sizes */
 @media only screen and (max-width: 732px) {
 
@@ -584,6 +588,10 @@ nav .button-collapse {
 
   h3 {
     font-size: 32px;
+  }
+
+  .reverse {
+    float: right !important;
   }
 }
 
