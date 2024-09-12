@@ -20,6 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     AOS.init();
 });
 
+const lenis = new Lenis();
+
+    lenis.on('scroll', (e) => {
+        console.log(e)
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
 //Type text functions
 function typeStrings(strings, delay) {
     let index = 0;
